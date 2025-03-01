@@ -1,39 +1,21 @@
+import { useState, useEffect } from "react";
+import ProgressBar from "../Components/ProgressBar";
 
-import {useState} from "react"
+const App = () => {
+  const [progress, setProgress] = useState(0);
 
- const App = () => {
-  const [cartItems, setCartItems] = useState([])
-  const [newCartItemName, setNewCartItemsName] = useState("");
-  const [newCartItemPrice, setNewCartItemsPrice] = useState("");
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => (prev < 100 ? prev + 10 : 100));
+    }, 1000);
 
-  const handleAddItemToCart = () => {
-    setNewCartItemsName("")
-    setNewCartItemsPrice("")
-    const newCartItem = {
-      name : newCartItemName,
-      price : newCartItemPrice 
-    }
-    let cartAllItems = [...cartItems,newCartItem];
-    setCartItems(cartAllItems);
-  }
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div>
-      <h2>Add to cart : </h2>
-      <input type="text" value={newCartItemName} placeholder="item name" onChange={(e)=>setNewCartItemsName(e.target.value)}/>
-      <input type="text" value={newCartItemPrice} placeholder="item price" onChange={(e)=>setNewCartItemsPrice(e.target.value)}/>
-      
-      <button onClick={handleAddItemToCart}>Add</button>
-
-      <h2>Cart items : </h2>
-      <ul>
-      {cartItems && cartItems.map((items,index)=>(
-        <li key={index}>
-          {items.name} : {items.price}
-        </li>
-      ))}
-      </ul>
-
+    <div style={{ width: "300px", margin: "50px auto", textAlign: "center" }}>
+      <h2>Progress Bar</h2>
+      <ProgressBar progress={progress} />
     </div>
   );
 };
