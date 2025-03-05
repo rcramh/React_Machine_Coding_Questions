@@ -1,0 +1,42 @@
+.pagination-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.all_card_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product_container{
+    height: 160px;
+    width: 160px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    padding : 4px;
+    border-radius: 8px;
+}
+
+.product_image_containter{
+    height: auto;
+    width: auto;
+    margin: 4px;
+    padding : 4px;
+}
+
+img{
+    height: 80px;
+    width: 80px;
+}
+
+button{
+    margin: 4px;
+}
+
+.title_container{
+    height: 24px;
+    width: 120px;
+}
