@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import GridPainter from './GridPainter';
 
+//this is one of main challenging part while implementing
 const createGrid = (n) => {
   let grid = [];
   for (let i = 0; i < n; i++) {
@@ -15,7 +16,7 @@ function Grid({selectedColor,n}){
   const [grid, setGrid] = useState(createGrid(n));
 
   const handleClick = (i,j) =>{
-    let updatedGrid = grid.map((row)=>[...row]);
+    let updatedGrid = grid.map((row)=>[...row]); // need to take care of deep copy here **
     updatedGrid[i][j] = selectedColor;
     setGrid(updatedGrid);
   }
