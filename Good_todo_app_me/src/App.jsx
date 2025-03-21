@@ -1,31 +1,28 @@
-import { useEffect, useState } from 'react'
-import TodoList from './assets/TodoList';
-import InputNewTaskComponent from './assets/InputNewTaskComponent';
-import './App.css'
+import React from "react";
 
-const initialTodoList = [
-  {id :1, task : 'task1'},
-  {id :2, task : 'task2'},
-  {id :3, task : 'task3'},
-]
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      count : 5,
+    }
+  }
 
-function App() {
+  handleClick = () => {
+    this.setState({count : this.state.count + 1})
+  }
 
-  const [todoList, setToList] = useState(undefined);
-
-  useEffect(()=>{
-    setToList(initialTodoList);
-  },[])
-
-  return (
-    <>
-      <div>
-        <h2>Todo App</h2>
-        <TodoList todoList={todoList}/>
-        <InputNewTaskComponent todoList={todoList} setToList={setToList}/>
-      </div>
-    </>
-  )
+  render() {
+    return (
+      <>
+        <div>
+          {this.state.count}
+        </div>
+        <button onClick={this.handleClick}>Increment</button>
+      </>
+      
+    )
+  }
 }
 
-export default App
+export default App; // ✅ Exporting the component
