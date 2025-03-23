@@ -1,0 +1,16 @@
+.item_container{
+  margin: 12px;
+}
+
+.title_container{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  border: 1px solid black;
+  padding: 4px;
+}
+
+.item_container{
+  border: 1px solid black;
+}
+
