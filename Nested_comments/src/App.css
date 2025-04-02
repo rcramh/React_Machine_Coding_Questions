@@ -1,0 +1,26 @@
+.comment_container{
+  display: flex;
+  /* border: 1px solid black; */
+  border-left: 1px solid black;
+}
+
+img{
+  height: 16px;
+  width: 16px;
+  /* border: 1px solid black; */
+}
+
+.image-container{
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.commenter_name_container{
+  font-weight: 900;
+  margin-right: 8px;
+  margin-left: 4px;
+}
+
+.sub-comment_container{
+  margin-left: 20px;
+}
