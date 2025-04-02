@@ -1,0 +1,16 @@
+.input_box{
+    width: 300px;
+}
+
+.suggestion_container{
+    width: 304px;
+    border: 1px solid black;
+}
+
+.one_suggestion{
+    cursor: pointer;
+}
+
+.one_suggestion:hover{
+    background-color: azure;
+}
