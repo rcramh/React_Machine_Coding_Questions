@@ -52,7 +52,7 @@ const App = () => {
 
   return (
     <>
-      <div> Traffic Light</div>
+      <div> Traffic Light </div>
       <div className="light_div_container" style={{background: `${trafficLight[currentLightIndex].color}`}}>
       </div>
     </>
