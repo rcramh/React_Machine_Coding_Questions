@@ -1,0 +1,18 @@
+.t_board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 96px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.board_box{
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  margin: 4px;
+  text-align: center;
+  cursor: pointer;
+}
