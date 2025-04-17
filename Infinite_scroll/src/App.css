@@ -1,0 +1,31 @@
+.all_card_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_container{
+  height: 200px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+img{
+  height: 140px;
+  width: 120px;
+  /* border: 1px solid black; */
+  padding-bottom: 10px;
+}
+
+.item_title_container{
+  font-weight: 600;
+  padding: 2px;
+}
+
+.price_container{
+
+}
